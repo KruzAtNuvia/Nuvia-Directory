@@ -1,0 +1,195 @@
+*** This was the main page for the Administration to have access to all tools needed for daily responsibilities ***
+
+<%{
+	Admin_MOTD_Check = Admin_MOTD[ID == ID];
+	Message_OTD_Admin_Page = "";
+	if(Admin_MOTD_Check != null && Admin_MOTD_Check.count() > 0)
+	{
+		allMessages = "";
+		hasValidMessages = false;
+		for each  motdRecord in Admin_MOTD_Check
+		{
+			if(motdRecord.Start_Date_Admin <= zoho.currentdate && motdRecord.End_Date_Admin == null || motdRecord.End_Date_Admin > zoho.currentdate)
+			{
+				allMessages = allMessages + motdRecord.Message_OTD_Admin_Page.toString() + "\n";
+				hasValidMessages = true;
+			}
+		}
+		if(hasValidMessages)
+		{
+			Admin_MOTD = allMessages.trim();
+		}
+		else
+		{
+			Admin_MOTD = "No messages currently. Keep up the good work.";
+		}
+	}
+	else
+	{
+		Admin_MOTD = "No messages currently. Keep up the good work.";
+	}
+	CSSStyle = thisapp.StyleCSS();
+	NavHTML = thisapp.NavBarHTML();
+	htmlOutput = thisapp.generateAnnouncementsHTML();
+	NuviaBanner = thisapp.NuviaBannerCode();
+	%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Main Page"</title>
+	<style> 
+	<%=CSSStyle%>
+</style>
+</head>
+<div id="Main-Page">
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul class="nav-list">
+			<%=NavHTML%>
+               
+            </ul>
+        </nav>
+    </header>
+	<div class="sliding-banner-container">
+  <div class="sliding-banner-container-scroll">
+ <div class="sliding-banner-message"><%=input.Admin_MOTD%>
+ </div>
+  </div>
+</div>
+ <%=NuviaBanner%>
+    <!-- Main Content -->
+   <div class="page-container">
+   <div class="container">
+        <h1 class="main-title">Admin Page</h1>
+        <h2 class="main-title"></h2>
+        <section class="test-links">
+            <h2 class="important-messages">This is where important information for admins will end up.</h2>
+        </section>
+    </div>
+</div>
+</div>
+    <!-- Quick Access Links -->
+	<div class="home-page-btn">
+    <div class="card quick-links-section">
+        <h2>Quick Access Links</h2>
+        <p>This provides access to all important sheets and pages that we use on a daily basis as admins. </p>
+		<div class="quick-link-sct">
+		
+			<!-- Quick Access Cards -->
+			<div class="zoho-card">
+				   	<h3>Admin Taskboard</h3>
+   				     <p>The main taskboard for all of the Admin Team. Camila and Valetina will input tasks into this.</p>
+      				  <a href="#" target="_blank">Go to Admin Taskboard</a>
+    			</div>
+				
+				
+				<div class="zoho-card">
+				<h3>Inventory Support Tickets (Lab Admin)</h3>
+				<p>This link will send you to the support ticket page for Lab Admins. (Might move to Directory?)</p>
+      				  <a href="#" target="_blank">Go to Lab Admin Ticket</a>
+    			</div>
+				
+				<div class="zoho-card">
+				<h3>Inventory Admin Page </h3>
+				<p>This link will send you to the admin page of Inventory Management, for the Inventory Team. </p>
+      				  <a href="#" target="_blank">Go to Inventory Admin Page</a>
+    			</div>
+				
+				
+				<div class="zoho-card">
+				   	<h3>Zoho Vault</h3>
+   				     <p>Where all passwords, accounts, and other useful private data is.</p>
+      				  <a href="#" target="_blank">Go to Zoho Vault</a>
+    			</div>
+             
+	<div class="zoho-card">
+	   	<h3>Master List</h3>
+        <p>The Master List of all Admin Information. </p>
+        <a href="#" target="_blank">Go to Master List
+		</a>
+    </div> 
+	
+	<div class="zoho-card">
+	   	<h3>Divvy/Bill</h3>
+        <p>Tracking expenses and payments.</p>
+        <a href="#" target="_blank">Go to Divvy</a>
+    </div>
+	
+	 <div class="zoho-card">
+	   	<h3>Uber Admin</h3>
+        <p>Where to add and manage employees for the Company Uber account</p>
+        <a href="#" target="_blank">Go to Uber</a>
+    </div>
+	
+	 <div class="zoho-card">
+	   	<h3>Amazon</h3>
+        <p>Ordering supplies from Amazon</p>
+        <a href="#" target="_blank">Go to Amazon</a>
+    </div>
+	
+	 <div class="zoho-card">
+	   	<h3>#</h3>
+        <p>Accessing the cameras throughout the labs</p>
+        <a href="#" target="_blank">Go to UniFi</a>
+    </div>
+	
+	 <div class="zoho-card">
+	   	<h3>Fedex</h3>
+        <p>Where to create shipments and track packages</p>
+        <a href="#" target="_blank">Go to Fedex</a>
+    </div>
+                
+	<div class="zoho-card">
+	   	<h3>#</h3>
+        <p>Booking flights and hotels for the company</p>
+        <a href="#" target="_blank">Go to Expedia</a>
+    </div>
+	
+	<div class="zoho-card">
+        	<h3># (WIP)</h3>
+   				     <p>WIP</p>
+      				  <a href="#" target="_blank">WIP</a>
+              </div>
+			</div>
+    </div>
+
+	    <!-- Navigation Guidance 
+    <div class="card guidance-section">
+        <h2>Navigation Guidance</h2>
+        <p>A brief explanation of what can be found in each section (e.g., Tests, Training).</p>
+    </div>
+	-->
+
+    <!-- Announcements and Updates -->
+    <div>
+       <%=htmlOutput%>
+    </div>
+
+
+    <!--  
+    <div class="card faq-section">
+        <h2>Search or FAQ Section</h2>
+        <p>Quick answers to frequently asked questions or a search bar for quick navigation.</p>
+    </div>
+-->
+    <!-- Resources Section 
+    <div class="card resources-section">
+        <h2>Resources Section</h2>
+        <p>Direct links to resources like guides, templates, or forms that employees may need.</p>
+    </div> -->
+</div>
+</body>
+<!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nuvia Dental Implant Center</p>
+    </footer>
+</html>
+
+<!-- Made by Kruz Merrill -->
+<%
+
+}%>
