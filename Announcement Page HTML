@@ -1,0 +1,60 @@
+<%{
+	CSSStyle = thisapp.StyleCSS();
+	NavHTML = thisapp.NavBarHTML();
+	AnnouncementHTML = thisapp.generateImportantAnnouncementsHTML();
+	NuviaBanner = thisapp.NuviaBannerCode();
+	%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Main Page"</title>
+	<style> 
+	<%=CSSStyle%>
+</style>
+</head>
+
+<div id="Main-Page">
+<body>
+    
+<!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul class="nav-list">
+			<%=NavHTML%>
+               
+            </ul>
+        </nav>
+    </header>
+ <%=NuviaBanner%>
+  
+<!-- Main Content -->
+	  <!-- Main Content -->
+   <div class="page-container">
+   <div class="container">
+        <h1 class="main-title">Announcement Section</h1>
+
+        <section class="test-links">
+            <h2 class="important-messages">Here is where all important Announcements can be found.</h2>
+            <div class="button-container">
+           
+        </section>
+		<div class="custom-btn-style1">
+		<a href="https://creatorapp.zoho.com/#Form:Important_Announcements" class="home-page-btnST">Create an Announcement</a>
+		</div>
+	<%=AnnouncementHTML%>
+    
+</div>
+</div>
+</body>
+<!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nuvia Dental Implant Center</p>
+    </footer>
+</html>
+
+<!-- Made by Kruz Merrill -->
+<%
+
+}%>
