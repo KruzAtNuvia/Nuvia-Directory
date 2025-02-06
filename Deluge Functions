@@ -1,0 +1,102 @@
+*** This took announcements that came from a Zoho Creator form, and implementing each of them into the "blog" style announcements on the Home Page ***
+
+string generateAnnouncementsHTML()
+{
+	// Fetch active announcements
+	announcementList = Announcements_Updates[Start_Date <= zoho.currentdate && Announcement_End_Date == null || Announcement_End_Date > zoho.currentdate];
+	// Start the HTML content as a string
+	htmlContent = "<!-- Announcements and Updates -->";
+	htmlContent = htmlContent + "<div class=\"card announcements-section\">";
+	htmlContent = htmlContent + "<h2>Announcements/Updates</h2>";
+	htmlContent = htmlContent + "<p>Stay tuned for updates about the website and upcoming features.</p>";
+	// Loop through each announcement and append to the string
+	for each  announcement in announcementList
+	{
+		header = announcement.Announcement_Header;
+		message = announcement.Announcement_Paragraph;
+		datePosted = ifnull(announcement.Start_Date.toDateTime(),zoho.currentdate).toString("dd-MMM-yyyy");
+		announcer = ifnull(announcement.Who_s_Announcing.User_Name,"Unknown");
+		htmlContent = htmlContent + "<div class=\"announcement-post\">";
+		htmlContent = htmlContent + "<h3>" + header + "</h3>";
+		htmlContent = htmlContent + "<div class=\"meta\">Posted on " + datePosted + " by " + announcer + "</div>";
+		htmlContent = htmlContent + "<p>" + message + "</p>";
+		htmlContent = htmlContent + "</div>";
+	}
+	// Close the HTML container
+	htmlContent = htmlContent + "</div>";
+	// Return the final HTML string
+	return htmlContent.trim();
+}
+
+*** This took announcements that also came from a Zoho Creator form, but this one was put them into the main Announcement Page of the Directory. Also added a button to Acknowledge each announcement ***
+
+string generateImportantAnnouncementsHTML()
+{
+	// Fetch active announcements
+	announcementList = Important_Announcements[Start_Date <= zoho.currentdate && End_Date == null || End_Date > zoho.currentdate];
+	// Start the HTML content
+	htmlContent = "";
+	// Separate HTML content for each category
+	adminContent = "<div class=\"custom-select-style1\" id=\"admin\"><h3>Admin</h3>";
+	ordersContent = "<div class=\"custom-select-style1\" id=\"orders\"><h3>Orders / Inventory</h3>";
+	dcrContent = "<div class=\"custom-select-style1\" id=\"dcr\"><h3>DCR</h3>";
+	for each  announcement in announcementList
+	{
+		announcementHTML = "<div class=\"custom-announcement-item-style1\">";
+		// Build each announcement's HTML
+		announcementHTML = announcementHTML + "<h4>" + announcement.Announcement_Header + "</h4>";
+		if(announcement.Picture_URL != null)
+		{
+			announcementHTML = announcementHTML + announcement.Picture_URL;
+		}
+		announcementHTML = announcementHTML + "<div class=\"meta\">Posted on " + announcement.Start_Date.toString("dd-MMM-yyyy") + " by " + announcement.Whos_Announcing.User_Name + "</div>";
+		if(announcement.Secondary_URL != null)
+		{
+			announcementHTML = announcementHTML + announcement.Secondary_URL;
+		}
+		announcementHTML = announcementHTML + "<p>" + announcement.Announcement_Paragraph + "</p>";
+		if(announcement.Third_URL != null)
+		{
+			announcementHTML = announcementHTML + announcement.Third_URL;
+		}
+		announcementHTML = announcementHTML + "<div class=\"custom-btn-style1\">" + "<a href=\"https://creatorapp.zoho.com/nuviasmiles/nuvia-directory/#Form:Acknowledgement_Form\" class=\"home-page-btnST\">Acknowledge</a>" + "</div>";
+		announcementHTML = announcementHTML + "</div>";
+		// Add to the correct category based on announcement type
+		imageURL = announcement.get("Image_Upload");
+		
+    if(imageURL != null && imageURL != "")
+		{
+			announcementHTML = announcementHTML + "<img src=\"" + imageURL + "\" alt=\"Announcement Image\" class=\"announcement-image\">";
+		}
+		if(announcement.Category == "Admin")
+		{
+			adminContent = adminContent + announcementHTML;
+		}
+		else if(announcement.Category == "Order/Inventory")
+		{
+			ordersContent = ordersContent + announcementHTML;
+		}
+		else if(announcement.Category == "DCR")
+		{
+			dcrContent = dcrContent + announcementHTML;
+		}
+	}
+	// Close category wrappers
+	adminContent = adminContent + "</div>";
+	ordersContent = ordersContent + "</div>";
+	dcrContent = dcrContent + "</div>";
+	// Combine all categories into the main content
+	htmlContent = "<div class=\"announcements-container\">" + adminContent + ordersContent + dcrContent + "</div>";
+	// Return the HTML
+	return htmlContent;
+}
+
+*** This was an interesting way that I could grab the User's name through the User Module I had created based off of their current logged in email ***
+
+string GrabUsersName()
+{
+	user_email = zoho.loginuserid;
+	user_record = User[Zoho_Email == user_email];
+	user_name = user_record.User_Name;
+	return user_name;
+}
