@@ -1,0 +1,143 @@
+*** This is the main page for Compliance and different resources related to Compliance *** 
+
+<%{
+	CSSStyle = thisapp.StyleCSS();
+	NavHTML = thisapp.NavBarHTML();
+	NuviaBanner = thisapp.NuviaBannerCode();
+	%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Main Page"</title>
+	<style> 
+	<%=CSSStyle%>
+</style>
+</style>
+</head>
+<div id="Main-Page">
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+           <ul class="nav-list">
+			<%=NavHTML%>
+               
+            </ul>
+        </nav>
+    </header>
+	<div class="sliding-banner-container">
+ 		 <div class="sliding-banner-container-scroll">
+			 <div class="sliding-banner-message">This could be used for important compliance information 
+			 </div>
+		  </div>
+	</div>
+ <%=NuviaBanner%>
+    <!-- Main Content -->
+   <div class="page-container">
+   <div class="container">
+        <h1 class="main-title">Compliance Home Page</h1>
+        <h2 class="main-title"></h2>
+        <section class="test-links">
+            <h2 class="important-messages">Here is where Regionals and Managers can access their compliance folders. </h2>
+        </section>
+    </div>
+</div>
+</div>
+    <!-- Compliance Drive Folder Links -->
+	    <div class="home-page-btn">
+        <div class="card quick-links-section">
+          <h2>Regionals</h2>
+          <p>This is for regionals folders</p>
+	    	<div class="compliance-link-sct">
+  <!-- Quick Access Cards -->
+    	<div class="compliance-card">
+	       	<h3></h3>
+            <p>#'s Compliance Folder.</p>
+            <a href="#" target="_blank">Go to Folder</a>
+      </div>
+             
+	<div class="compliance-card">
+	   	<h3>#</h3>
+        <p>#' Compliance Folder.</p>
+        <a href="#" target="_blank">Go to Folder</a>
+    </div> 
+	
+	<div class="compliance-card">
+	   	<h3>#</h3>
+        <p>#'s Compliance Folder.</p>
+        <a href="#" target="_blank">Go to Folder</a>
+    </div>
+	
+	 <div class="compliance-card">
+	   	<h3>#</h3>
+        <p>#'s Complaince Folder.</p>
+        <a href="#" target="_blank">Go to Folder</a>
+    </div>
+	
+	 <div class="compliance-card">
+	   	<h3>#</h3>
+        <p>#' Compliance Folder.</p>
+        <a href="#" target="_blank">Go to Folder</a>
+    </div>
+	
+	 <div class="compliance-card">
+	   	<h3>#</h3>
+        <p>#'s Compliance Folder</p>
+        <a href="#" target="_blank">Go to Folder</a>
+    </div>
+	
+	
+              
+			</div>
+    </div>
+
+	    <!--  
+    <div class="card guidance-section">
+        <h2>TBA</h2>
+        <p></p>
+    </div>
+	-->
+
+    <!-- # 
+    <div class="card announcements-section">
+        <h2>#</h2>
+        <p>Will need to connect with Compliance to see what they would like added</p>
+	</div>		
+	-->
+
+
+  <!-- Can add announcements, more files & folders, lots of options. Need to connect with Complaince regarding what they would like added to their home page -->
+
+
+    <!-- More Card Options 
+    <div class="card guidance-section">
+        <h2></h2>
+        <p></p>
+    </div>
+-->
+    <!-- More Card Options 
+    <div class="card faq-section">
+        <h2></h2>
+        <p></p>
+    </div>
+-->
+    <!-- More Card Options 
+    <div class="card resources-section">
+        <h2></h2>
+        <p></p>
+    </div> 
+-->
+</div>
+</body>
+<!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nuvia Dental Implant Center</p>
+    </footer>
+</html>
+
+<!-- Made by Kruz Merrill -->
+<%
+
+}%>
