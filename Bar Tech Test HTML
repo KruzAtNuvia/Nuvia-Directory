@@ -1,0 +1,55 @@
+*** Page for the Bar Tech's tests ***
+<%{
+	CSSStyle = thisapp.StyleCSS();
+	NavHTML = thisapp.NavBarHTML();
+	NuviaBanner = thisapp.NuviaBannerCode();
+	%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Main Page"</title>
+	<style> 
+	<%=CSSStyle%>
+</style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul class="nav-list">
+		        	<%=NavHTML%>
+               
+            </ul>
+        </nav>
+    </header>
+     <%=NuviaBanner%>
+    <div class="container">
+        <header>
+            <h1 class="main-title">Bar Technician Tests</h1>
+            <h2 class="main-title">Pruebas para Técnico en Barras</h2>
+        </header>
+
+        <section class="test-links">
+            <h2 class="select-test">Select Your Test</h2>
+            <div class="button-container">
+                <a href="#">Glossary Test (Spanish)</a>
+                <a href="#">Glossary Test (English)</a>
+                <a href="#" target="_blank" class="test-button">5.1 opaque bars/maintenance (Spanish)</a>
+			        	<a href="#" target="_blank" class="test-button">Bar Tech MAIN EXAM(Spanish)</a>
+			        	<a href="#" target="_blank" class="test-button">Bar Tech MAIN EXAM(English)</a>
+            </div>
+        </section>
+
+       
+    </div>
+</body>
+<footer class="footer">
+    <p>&copy; 2024 Nuvia Dental Implant Center</p>
+</footer>
+</html>
+<%
+
+}%>
