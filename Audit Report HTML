@@ -1,0 +1,48 @@
+*** This page is for the audit reports from Compliance / R & D. Page is a WIP, as I have to connect with Compliance to get the correct information ***
+<%{
+	CSSStyle = thisapp.StyleCSS();
+	NavHTML = thisapp.NavBarHTML();
+	NuviaBanner = thisapp.NuviaBannerCode();
+	%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Main Page"</title>
+	<style> 
+	<%=CSSStyle%>
+</style>
+</head>
+
+<div id="Main-Page"
+<body>
+    
+<!-- Navigation Bar -->
+    <header>
+        <nav>
+           <ul class="nav-list">
+			<%=NavHTML%>
+               
+            </ul>
+        </nav>
+    </header>
+ <%=NuviaBanner%>
+  
+<!-- Main Content -->
+    <div class="container">
+        <h1 class="main-title">Audit Reports</h1>
+		<h2 class="select-test">This is where all the folders for the audit reports will go</h2>
+    </div>
+
+    
+
+</body>
+<!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nuvia Dental Implant Center</p>
+    </footer>
+</html>
+<%
+
+}%>
