@@ -1,0 +1,104 @@
+*** This it the main HR page, have to connect with HR to get more added, as this is just the bare minimum ***
+
+<%{
+	CSSStyle = thisapp.StyleCSS();
+	NavHTML = thisapp.NavBarHTML();
+	NuviaBanner = thisapp.NuviaBannerCode();
+	%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Main Page"</title>
+	<style> 
+	<%=CSSStyle%>
+</style>
+</style>
+</head>
+<div id="Main-Page">
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+           <ul class="nav-list">
+			<%=NavHTML%>
+               
+            </ul>
+        </nav>
+    </header>
+	<div class="sliding-banner-container">
+ 		 <div class="sliding-banner-container-scroll">
+			 <div class="sliding-banner-message">This can be used to display HR Information?  
+			 </div>
+		  </div>
+	</div>
+ <%=NuviaBanner%>
+    <!-- Main Content -->
+   <div class="page-container">
+   <div class="container">
+        <h1 class="main-title">HR Home Page</h1>
+        <h2 class="main-title"></h2>
+        <section class="test-links">
+            <h2 class="important-messages">Here is where all information for Human Resources are. </h2>
+        </section>
+    </div>
+</div>
+</div>
+   <!-- Quick Access Links -->
+    <div class="card quick-links-section">
+        <h2>#</h2>
+        <p>The main website for Nuvia HR. Access code is "nuvia"</p>
+		<div class="home-page-btn">
+                <a href="#" class="home-page-btnST">UKG</a>
+			</div>
+    </div>
+	
+<!-- Options -->
+	<!-- <div class="compliance-card">
+	   	<h3></h3>
+        <p></p>
+        <a href="#" target="_blank"></a>
+    </div> -->
+	
+	
+	    <!-- Options 
+    <div class="card guidance-section">
+        <h2></h2>
+        <p></p>
+    </div>
+	-->
+
+    <!-- Announcements and Updates -->
+    <div class="card announcements-section">
+        <h2>Options to put more HR information</h2>
+        <p>Will need to connect with # and HR to see what they would like added.</p>
+		
+		 <div class="announcement-post">
+			<h3>Can use this area for HR announcements</h3>
+			<div class="meta">
+			</div>
+			<p></p>
+			<!-- <a href="#" class="read-more">Read More...</a> -->
+		
+    </div>
+
+
+    <!-- More Options 
+    <div class="card guidance-section">
+        <h2>#</h2>
+        <p>#</p>
+    </div> -->
+
+</div>
+</body>
+<!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nuvia Dental Implant Center</p>
+    </footer>
+</html>
+
+<!-- Made by Kruz Merrill -->
+<%
+
+}%>
