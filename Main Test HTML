@@ -1,0 +1,67 @@
+*** This page is the Main testing page. Included all positions' tests and exams ***
+
+<%{
+	CSSStyle = thisapp.StyleCSS();
+	NavHTML = thisapp.NavBarHTML();
+	NuviaBanner = thisapp.NuviaBannerCode();
+	%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Main Page"</title>
+	<style> 
+	<%=CSSStyle%>
+</style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+           <ul class="nav-list">
+			<%=NavHTML%>
+               
+            </ul>
+        </nav>
+    </header>
+     <%=NuviaBanner%>
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="main-title">Nuvia Lab Testing Center</h1>
+	<div class="maintest-card-section">
+       <div class="maintest-card">
+        <h3>Lab Technician Test Page</h3>
+        <p>Lab Techs tests, including Main Exam</p>
+        <a href="https://creatorapp.zoho.com/nuviasmiles/nuvia-directory/#Page:Lab_Technician" target="_blank">Go To Tests</a>
+    </div>
+	
+    <div class="maintest-card">
+        <h3>Bar Technician Test Page</h3>
+        <p>Bar Techs tests, including Main Exam</p>
+        <a href="https://creatorapp.zoho.com/nuviasmiles/nuvia-directory/#Page:Bar_Technician" target="_blank">Go To Tests</a>
+    </div>
+	
+    <div class="maintest-card">
+	   <h3>Articulator Test Page</h3>
+        <p>Articulators tests, including Main Exam </p>
+        <a href="https://creatorapp.zoho.com/nuviasmiles/nuvia-directory/#Page:Articulator" target="_blank">Go To Tests</a>
+    </div>
+	
+    <div class="maintest-card">
+	   <h3>Manager Test Page</h3>
+        <p>Managers tests, including Main Exam</p>
+        <a href="https://creatorapp.zoho.com/nuviasmiles/nuvia-directory/#Page:Manager_Test" target="_blank">Go To Tests</a>
+   	 </div>
+    </div>
+   </div>
+</body>
+<!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nuvia Dental Implant Center</p>
+    </footer>
+</html>
+<%
+
+}%>
