@@ -1,0 +1,50 @@
+*** This was the main page for the Managers test and exams. More tests are being added slowly ***
+
+<%{
+	CSSStyle = thisapp.StyleCSS();
+	NavHTML = thisapp.NavBarHTML();
+	NuviaBanner = thisapp.NuviaBannerCode();
+	%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Main Page"</title>
+	<style> 
+	<%=CSSStyle%>
+</style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+           <ul class="nav-list">
+			<%=NavHTML%>
+               
+            </ul>
+        </nav>
+    </header>
+     <%=NuviaBanner%>
+    <div class="container">
+        <header>
+            <h1 class="main-title">Manager Tests</h1>
+            <h2 class="main-title">Pruebas de gestión</h2>
+        </header>
+        
+        <section class="test-links">
+            <h2 class="select-test">Select Your Test</h2>
+            <div class="button-container">
+                <a href="#" target="_blank" class="test-button">Manager MAIN EXAM (Spanish)</a>
+			        	<a href="#" target="_blank" class="test-button">Manager MAIN EXAM (English)</a>
+            </div>
+        </section>
+     </div>
+</body>
+<footer class="footer">
+    <p>&copy; 2024 Nuvia Dental Implant Center</p>
+</footer>
+</html>
+<%
+
+}%>
