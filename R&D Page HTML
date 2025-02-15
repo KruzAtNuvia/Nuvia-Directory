@@ -1,0 +1,50 @@
+*** This is another page that is a WIP. I need to connect with R & D to add everything they would like, but the foundation is there *** 
+
+<%{
+	CSSStyle = thisapp.StyleCSS();
+	NavHTML = thisapp.NavBarHTML();
+	NuviaBanner = thisapp.NuviaBannerCode();
+	%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R & D</title>
+	<style> 
+	<%=CSSStyle%>
+</style>
+</head>
+<div id="Main-Page"
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul class="nav-list">
+			<%=NavHTML%>
+               
+            </ul>
+        </nav>
+    </header>
+ <%=NuviaBanner%>
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="main-title">R&D Page</h1>
+		
+		 <section class="test-links">
+            <h2 class="important-messages">This page will be used for R & D information and links.</h2>
+
+        </section>
+    </div>
+
+    
+
+</body>
+<!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nuvia Dental Implant Center</p>
+    </footer>
+</html>
+<%
+
+}%>
