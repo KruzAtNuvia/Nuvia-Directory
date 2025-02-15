@@ -1,0 +1,51 @@
+*** This is a WIP page, as I have to connect with Complaiance, R & D, and others to get the access needed to add protocols to this page, but the foundation is there *** 
+
+<%{
+	CSSStyle = thisapp.StyleCSS();
+	NavHTML = thisapp.NavBarHTML();
+	NuviaBanner = thisapp.NuviaBannerCode();
+	%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocols</title>
+	<style> 
+	<%=CSSStyle%>
+</style>
+</head>
+
+<div id="Main-Page"
+<body>
+    
+<!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul class="nav-list">
+			<%=NavHTML%>
+               
+            </ul>
+        </nav>
+    </header>
+ <%=NuviaBanner%>
+  
+<!-- Main Content -->
+    <div class="container">
+        <h1 class="main-title">Protocols</h1>
+		<h2 class="select-test">This is where all the folders for protocols will go</h2>
+    </div>
+
+    
+
+</body>
+<!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nuvia Dental Implant Center</p>
+    </footer>
+</html>
+
+<!-- Made by Kruz Merrill -->
+<%
+
+}%>
