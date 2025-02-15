@@ -1,0 +1,88 @@
+*** This page is where I have included all other software and programs made by the Nuvia Development team. This was laid out in card style to help with UI/UX ***
+
+<%{
+	CSSStyle = thisapp.StyleCSS();
+	NavHTML = thisapp.NavBarHTML();
+	NuviaBanner = thisapp.NuviaBannerCode();
+	%>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoho Links</title>
+	<style> 
+	<%=CSSStyle%>
+</style>
+</head>
+
+<div id="Main-Page"
+<body>
+    
+<!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul class="nav-list">
+			<%=NavHTML%>
+               
+            </ul>
+        </nav>
+    </header>
+	 <%=NuviaBanner%>
+  
+<!-- Main Content -->
+    <div class="container">
+        <h1 class="main-title">Zoho Links</h1>
+		
+		<section class="test-links">
+            <h2 class="important-messages">Here is where you can find the links for all other zoho applications!</h2>
+			
+<!-- Zoho Cards -->
+<div class="zoho-section">
+    <div class="zoho-card">
+      <h3>Inventory Management</h3>
+        <p>For managing all company stock and purchase orders</p>
+        <a href="#" target="_blank">Go to Inventory</a>
+    </div>
+
+    <div class="zoho-card">
+      <h3>Uniform management</h3>
+        <p>Adding your employees sizes and profile to the uniform management system.</p>
+        <a href="#" target="_blank">Go to Uniform Management</a>
+    </div>
+	
+    <div class="zoho-card">
+      <h3>Employee OTM Folder</h3>
+        <p>Employee evaluations & Employee of the month tracker</p>
+        <a href="#" target="_blank">Go to Employee OTM</a>
+    </div>
+	
+    <div class="zoho-card">
+      <h3>Nuvia Labs</h3>
+        <p>Implant production Software</p>
+        <a href="#" target="_blank">Go to Nuvia Labs</a>
+    </div>
+	
+    <div class="zoho-card">
+	   <h3>Asset Management (WIP)</h3>
+        <p> Upload and Manage all equipment</p>
+        <a href="#" target="_blank">Go to Asset Management (WIP)</a>
+    </div>
+	
+      <div class="zoho-card">
+	     <h3>Supply Management (WIP)</h3>
+          <p>For managing inventory of supplies, and ordering of supplies</p>
+          <a href="#" target="_blank">Go to Supply Management (WIP)</a>
+      </div>
+  </div>
+</div>
+
+</body>
+<!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nuvia Dental Implant Center</p>
+    </footer>
+</html>
+
+<!-- Made by Kruz Merrill -->
+<%
+
+}%>
