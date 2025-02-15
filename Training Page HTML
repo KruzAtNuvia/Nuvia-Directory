@@ -1,0 +1,65 @@
+*** This page is a WIP, but has some things such as training documents and other important resources for training the new technicians. The links have been replaced with # due to company privacy. ***
+
+<%{
+	CSSStyle = thisapp.StyleCSS();
+	NavHTML = thisapp.NavBarHTML();
+	NuviaBanner = thisapp.NuviaBannerCode();
+	%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training</title>
+	<style> 
+	<%=CSSStyle%>
+</style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul class="nav-list">
+			<%=NavHTML%>
+               
+            </ul>
+        </nav>
+    </header>
+     <%=NuviaBanner%>
+    <div class="container">
+        <header>
+            <h1 class="main-title">Training</h1>
+        </header>
+
+       <div class="zoho-section">
+    <div class="zoho-card">
+        <h3>Technician Support Manual</h3>
+        <p>The Lab Support Technician Manual provides guidelines for lab procedures, equipment troubleshooting, and maintenance tasks to ensure efficient technical support and safety in the lab.</p>
+        <a href="#" target="_blank" >Go to Technician Manual</a>
+    </div>
+
+    <div class="zoho-card">
+     <!--img src="path-to-image-2.jpg" alt="Zoho App 2 Logo"> -->
+        <h3>Pensum Training</h3>
+        <p>Link to the Pensum Training folder. Every training manager should be going through this and completing it with each trainee.</p>
+        <a href="#" target="_blank">Go to Pensum Folder</a>
+    </div>
+
+	<div class="zoho-card">
+     <!--img src="path-to-image-2.jpg" alt="Zoho App 2 Logo"> -->
+        <h3>CAM Training & Help Page</h3>
+        <p>This brings you to the CAM help website for all information and assistance with CAM</p>
+        <a href="#" target="_blank">Go to CAM page</a>
+    </div>
+       
+    </div>
+	</div>
+</body>
+<footer class="footer">
+    <p>&copy; 2024 Nuvia Dental Implant Center</p>
+</footer>
+</html>
+<%
+
+}%>
