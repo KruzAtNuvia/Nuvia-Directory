@@ -1,0 +1,91 @@
+*** This is where Im experimenting with different "task board" options. The thought was an area where the regionals and administration can put daily tasks and track how fast things are getting completed. The main option I have been experimenting with is "Zoho Projects. ***
+
+<%{
+	CSSStyle = thisapp.StyleCSS();
+	NavHTML = thisapp.NavBarHTML();
+	NuviaBanner = thisapp.NuviaBannerCode();
+	%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskboard</title>
+	<style> 
+	<%=CSSStyle%>
+</style>
+</head>
+
+<div id="Main-Page"
+<body>
+    
+<!-- Navigation Bar -->
+    <header>
+        <nav>
+           <ul class="nav-list">
+			<%=NavHTML%>
+               
+            </ul>
+        </nav>
+    </header>
+ <%=NuviaBanner%>
+  
+<!-- Main Content -->
+    <div class="container">
+        <h1 class="main-title">Task Board</h1>
+		
+		 <section class="test-links">
+            <h2 class="important-messages">This is where the Managers Task Board will go</h2>
+    </div>
+
+<!-- Cards -->
+<div class="taskboard-card-section">
+    <div class="taskboard-card">
+        <h3>#s Taskboard </h3>
+        <p>This is where # can find her taskboard</p>
+        <a href="https://projects.zoho.com/portal/nuviasmiles#project/#" target="_blank">Go to Taskboard</a>
+    </div>
+
+   <div class="taskboard-card">
+        <h3># Taskboard </h3>
+        <p>This is where # can find his taskboard</p>
+        <a href="https://projects.zoho.com/portal/nuviasmiles#project/#" target="_blank">Go to Taskboard</a>
+    </div>
+	
+    <div class="taskboard-card">
+        <h3># Taskboard </h3>
+        <p>This is where # can find her taskboard</p>
+        <a href="https://projects.zoho.com/portal/nuviasmiles#project/#" target="_blank">Go to Taskboard</a>
+    </div>
+	
+    <div class="taskboard-card">
+        <h3># taskboard </h3>
+        <p>This is where # can find his taskboard</p>
+        <a href="https://projects.zoho.com/portal/nuviasmiles#project/#" target="_blank">Go to Taskboard</a>
+    </div>
+	
+   <div class="taskboard-card">
+        <h3># Taskboard </h3>
+        <p>This is where # can find her taskboard</p>
+        <a href="https://projects.zoho.com/portal/nuviasmiles#project/#" target="_blank">Go to Taskboard</a>
+    </div>
+	
+   <div class="taskboard-card">
+        <h3># Taskboard </h3>
+        <p>This is where # can find her taskboard</p>
+        <a href="https://projects.zoho.com/portal/nuviasmiles#project/#" target="_blank">Go to Taskboard</a>
+    </div>
+</div>
+    </div>
+
+    
+
+</body>
+<!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nuvia Dental Implant Center</p>
+    </footer>
+</html>
+<%
+
+}%>
